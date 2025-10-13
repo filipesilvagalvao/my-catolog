@@ -1,0 +1,127 @@
+.card {
+  aspect-ratio: 9/13;
+  object-fit: cover;
+  width: 100%;
+  border: 1px solid var(--border-color-1);
+  -webkit-box-shadow: 2px 4px 16px -4px #0000006e;
+  box-shadow: 2px 4px 16px -4px #0000006e;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03, 1.03);
+}
+
+.card__img {
+  width: 100%;
+  border-bottom: 1px solid var(--border-color-1);
+}
+
+.card__h3 {
+  opacity: 0.6;
+}
+
+.card__price {
+  color: var(--text-color-2);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card__h3,
+.card__price {
+  padding: 5px;
+}
+
+.card__descriptionBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+  color: var(--text-color-1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card__descriptionBtn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.card__modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.774);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  transition: 0.3s;
+  padding: 15px;
+}
+
+.card__modal {
+  display: flex;
+  width: min(1000px, 100%);
+  height: 400px;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid var(--border-color-2);
+  color: var(--text-color-1);
+  position: relative;
+}
+
+.card__modalH4 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: var(--text-color-2);
+}
+
+.card__description {
+  opacity: 0.6;
+}
+.card__modalImg {
+  width: auto;
+  height: 100%;
+}
+
+.card__modal > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.card__modalClose {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+}
+
+:global(.closed){
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 750px) {
+  .card__modal {
+    flex-wrap: wrap;
+  }
+  .card__modalImg {
+    width:70%;
+    height: auto;
+    padding-left: 15px;
+  }
+  .card__modal {
+    height: fit-content;
+  }
+}
+
