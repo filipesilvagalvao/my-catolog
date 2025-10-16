@@ -31,7 +31,7 @@ function Header() {
         formData.append("description", description);
         formData.append("photo", photo);
 
-        const response = await fetch("http://api-tenis.42web.io/wp-json/meuapp/v2/produtos",
+        const response = await fetch("https://api-tenis.42web.io/wp-json/meuapp/v2/produtos",
             {
                 method: "POST",
                 body: formData,

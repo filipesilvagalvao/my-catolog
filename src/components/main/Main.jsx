@@ -7,7 +7,7 @@ function Main() {
 
     async function getProducts() {//fetch numa func assíncrona com tratamento de respostas
         try {
-            const response = await fetch("http://api-tenis.42web.io/wp-json/meuapp/v2/produtos")//endepoint que fiz para a tarefa
+            const response = await fetch("https://api-tenis.42web.io/wp-json/meuapp/v2/produtos")//endepoint que fiz para a tarefa
             if(!response.ok){
                 throw new Error(`Erro HTTP: ${response.status}`);
             }
