@@ -106,6 +106,21 @@
   cursor: pointer;
 }
 
+.card__deleteButton {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.card__deleteButton:hover {
+    background-color: #cc0000;
+}
+
 :global(.closed){
     opacity: 0;
     pointer-events: none;
